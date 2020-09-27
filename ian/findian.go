@@ -22,7 +22,7 @@ func main() {
 func scanLineToLowerCase() string {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Scan()
-	return strings.ToLower(scanner.Text())
+	return strings.ToLower(strings.TrimSpace(scanner.Text()))
 }
 
 func isIan(lowerInput string) bool {
