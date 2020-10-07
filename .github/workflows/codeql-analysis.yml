@@ -46,7 +46,7 @@ jobs:
 
     - name: Build all go files as separate projects
       run: |
-       find **/*\.go | while read -r file; do; go build $file; done
+        find -name "*.go" | while read -r file; do go build $file; done
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
